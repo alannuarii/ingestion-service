@@ -102,6 +102,6 @@ export class TimescaleService {
     async close() {
     }
 }
-}
 
 export const timescaleService = new TimescaleService();
+
