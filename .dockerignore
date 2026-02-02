@@ -1,0 +1,10 @@
+node_modules/
+.git/
+.env
+logs/
+*.log
+.DS_Store
+.idea/
+.vscode/
+debug-mqtt.js
+jenkins-deploy.sh

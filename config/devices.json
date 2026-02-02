@@ -1,0 +1,86 @@
+[
+  {
+    "name": "PM5350_DG89",
+    "ip": "192.168.0.179",
+    "port": 504,
+    "requests": [
+      {
+        "unitId": 8,
+        "name": "PM_DG8",
+        "startAddr": 2999,
+        "quantity": 112,
+        "type": "PM5350"
+      },
+      {
+        "unitId": 9,
+        "name": "PM_DG9",
+        "startAddr": 2999,
+        "quantity": 112,
+        "type": "PM5350"
+      }
+    ]
+  },
+  {
+    "name": "DSE8610MKII_DG6",
+    "ip": "192.168.0.235",
+    "port": 502,
+    "requests": [
+      {
+        "unitId": 1,
+        "name": "PM_DG6",
+        "startAddr": 1031,
+        "quantity": 20,
+        "type": "DSE_ELECTRIC"
+      },
+      {
+        "unitId": 1,
+        "name": "PM_DG6_POWER",
+        "startAddr": 1536,
+        "quantity": 25,
+        "type": "DSE_POWER"
+      }
+    ]
+  },
+  {
+    "name": "DSE8611MKII_DG7",
+    "ip": "192.168.0.236",
+    "port": 502,
+    "requests": [
+      {
+        "unitId": 1,
+        "name": "PM_DG7",
+        "startAddr": 1031,
+        "quantity": 20,
+        "type": "DSE_ELECTRIC"
+      },
+      {
+        "unitId": 1,
+        "name": "PM_DG7_POWER",
+        "startAddr": 1536,
+        "quantity": 25,
+        "type": "DSE_POWER"
+      }
+    ]
+  },
+  {
+    "name": "DSE8610_DG1",
+    "ip": "192.168.0.182",
+    "port": 502,
+    "requests": [
+      {
+        "unitId": 1,
+        "name": "PM_DG1",
+        "startAddr": 1031,
+        "quantity": 20,
+        "type": "DSE_ELECTRIC"
+      },
+      {
+        "unitId": 1,
+        "name": "PM_DG1_POWER",
+        "startAddr": 1536,
+        "quantity": 25,
+        "type": "DSE_POWER"
+      }
+    ]
+  }
+]

@@ -1,0 +1,19 @@
+{
+  "name": "ingestion-service",
+  "version": "1.0.0",
+  "description": "Node.js Ingestion Service for Modbus to MQTT/InfluxDB",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "node --watch src/index.js"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.1",
+    "express": "^4.18.2",
+    "jsmodbus": "^4.0.6",
+    "node-cron": "^3.0.3",
+    "pg": "^8.18.0",
+    "winston": "^3.11.0"
+  }
+}
