@@ -1,19 +1,5 @@
 [
   {
-    "name": "PM5350_DG89",
-    "ip": "192.168.0.179",
-    "port": 504,
-    "requests": [
-      {
-        "name": "PM5350_DG89",
-        "type": "PM5350",
-        "startAddr": 2999,
-        "quantity": 100,
-        "unitId": 1
-      }
-    ]
-  },
-  {
     "name": "DSE8610MKII_DG6",
     "ip": "192.168.0.235",
     "port": 502,
@@ -48,27 +34,6 @@
       },
       {
         "name": "DSE8611MKII_DG7",
-        "type": "DSE_POWER",
-        "startAddr": 1536,
-        "quantity": 26,
-        "unitId": 1
-      }
-    ]
-  },
-  {
-    "name": "DSE8610_DG1",
-    "ip": "192.168.0.182",
-    "port": 502,
-    "requests": [
-      {
-        "name": "DSE8610_DG1",
-        "type": "DSE_ELECTRIC",
-        "startAddr": 1030,
-        "quantity": 40,
-        "unitId": 1
-      },
-      {
-        "name": "DSE8610_DG1",
         "type": "DSE_POWER",
         "startAddr": 1536,
         "quantity": 26,
