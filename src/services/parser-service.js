@@ -52,6 +52,8 @@ export class ParserService {
      */
     static parseDSEMeter(buffer) {
         try {
+            // Debug: Print raw buffer to verify offsets
+            logger.info(`[DSE_METER RAW] ${buffer.toString('hex')}`);
             return {
                 frequency: ParserService.safeParse(buffer.readUInt16BE(0), 10),
                 voltageL1L2: ParserService.safeParse(buffer.readUInt32BE(14), 10),
