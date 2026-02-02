@@ -31,6 +31,13 @@ class ModbusConnection {
             logger.error(`[${this.name}] Connection Error: ${err.message}`);
         });
 
+        this.socket.setTimeout(10000); // 10s Timeout
+        this.socket.on('timeout', () => {
+            logger.warn(`[${this.name}] Connection Timed Out. Destroying socket...`);
+            this.socket.destroy();
+            this.isConnected = false;
+        });
+
         this.socket.on('close', () => {
             this.isConnected = false;
             logger.warn(`[${this.name}] Connection Closed. Reconnecting in 5s...`);
