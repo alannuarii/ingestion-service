@@ -47,6 +47,9 @@ class ModbusConnection {
     async poll() {
         if (!this.isConnected) return;
 
+        let mergedData = {};
+        let hasData = false;
+
         for (const req of this.requests) {
             try {
                 // Wait for response
@@ -64,12 +67,19 @@ class ModbusConnection {
                 }
 
                 if (parsedData) {
-                    this.handleData(req.name, parsedData);
+                    // Merge data from this request into the main object
+                    mergedData = { ...mergedData, ...parsedData };
+                    hasData = true;
                 }
 
             } catch (err) {
                 logger.error(`[${this.name}] Poll Error (Unit ${req.unitId}): ${err.message}`);
             }
+        }
+
+        // Save merged data once per cycle (if any data was collected)
+        if (hasData) {
+            this.handleData(this.name, mergedData);
         }
     }
 
