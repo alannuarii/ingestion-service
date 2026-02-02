@@ -16,6 +16,7 @@ export class TimescaleService {
             return;
         }
 
+        logger.info(`[TimescaleDB] Attempting connection to ${config.db.host}:${config.db.port}...`);
         this.pool = new Pool({
             host: config.db.host,
             port: config.db.port,

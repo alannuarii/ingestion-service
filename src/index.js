@@ -24,6 +24,7 @@ app.get('/status', (req, res) => {
 const start = async () => {
     try {
         // 1. Connect to Infrastructure
+        logger.info(`[Config] DB Enabled: ${config.db.enabled}, Host: ${config.db.host}, Port: ${config.db.port}, User: ${config.db.user}, DB: ${config.db.database}`);
         timescaleService.connect();
 
         // 2. Start Modbus Polling
