@@ -19,13 +19,13 @@ echo "🏗️  Building Docker Image..."
 docker build -t $IMAGE_NAME .
 
 # 3. Run Container
-# Mapping port 5040 (Host) -> 3000 (Container) as per your request
-echo "� Running Container..."
+# Menggunakan --network host untuk mengatasi masalah koneksi ke 10.10.10.100 (Firewall/Routing)
+echo "🐳 Running Container..."
 docker run -d \
-  -p 5040:3000 \
+  --network host \
   --name $CONTAINER_NAME \
   --restart always \
-  -e PORT=3000 \
+  -e PORT=5040 \
   -e POLL_INTERVAL=3000 \
   -e ENABLE_DB_WRITE=true \
   -e POSTGRES_HOST=${POSTGRES_HOST} \
