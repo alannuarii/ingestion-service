@@ -93,18 +93,15 @@ export class TimescaleService {
 
         try {
             await this.pool.query(query, values);
-            // logger.debug(`Saved data for ${deviceId}`);
+            logger.info(`[TimescaleDB] Saved data for ${deviceId}`);
         } catch (err) {
             logger.error(`TimescaleDB Insert Error [${deviceId}]: ${err.message}`);
         }
     }
 
     async close() {
-        if (this.pool) {
-            await this.pool.end();
-            logger.info('TimescaleDB connection pool closed.');
-        }
     }
+}
 }
 
 export const timescaleService = new TimescaleService();
